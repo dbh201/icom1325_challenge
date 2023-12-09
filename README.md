@@ -95,11 +95,14 @@ After checking some of the results, we will eventually find the /data directory,
 
 <details>
     <summary>By checking its content we will find the first flag!</summary>
-    >> flag1: Pr0Jmngmnt15c00l
-    >> User: admin
-    >> Password: thispasswordishuge!
-    >> You got the flag! What a place for a password to be, right? :P
-    >> How much can you do with your new admin account? There must be some way to control the forum. 
+    <pre><code>
+    flag1: Pr0Jmngmnt15c00l
+    User: admin
+    Password: thispasswordishuge!
+    You got the flag! What a place for a password to be, right? :P
+    How much can you do with your new admin account? There must be some way to control the forum. 
+    </code></pre>
+
 </details>
 
 
