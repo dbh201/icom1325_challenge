@@ -140,6 +140,12 @@ We now have access to the server's terminal as nginx's user.
 
 Unfortunely, we can't really find the flag here, so we need to navigate on the system. Changing our directory to www-data's home directory, then listing the files there, we will see flag2.txt.
 
+```
+cd
+ls
+cat flag2.txt
+```
+
 <details>
     <summary>Let's see what's inside of it</summary>
     <pre><code>
@@ -148,7 +154,7 @@ Unfortunely, we can't really find the flag here, so we need to navigate on the s
     You got the flag! Now it's time to escalate...
 
     You need to become root using your p0wny shell, but you can't seem to type in your password...
-    </code></pre>
+</code></pre>
 
 </details>
 
