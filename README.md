@@ -116,11 +116,11 @@ First, login with your recently "stolen" credentials! Hey, they shouldn't keep i
 
 Exploring some of the buttons on the forum, we will eventually come across "Administration", which will take us to the Admin Control Panel.
 
->> IMG 2
+![/Administration button location](/IMG2.png?raw=true)
 
 More exploring! After checking some of the links on the Admin Control Panel, we will eventually find the "File Administration System", where we can see, download, and - most important - upload some files.
 
->> IMG 3
+![/Admin Control Panel home page](/IMG3.png?raw=true)
 
 Good for us, this forum doesn't even check what files are being uploaded, so we are going to import a script!
 
@@ -136,7 +136,7 @@ https://192.168.0.5:4443/shell.php
 
 We now have access to the server's terminal as nginx's user.
 
->> IMG 4
+![/p0wny's terminal](/IMG4.png?raw=true)
 
 Unfortunely, we can't really find the flag here, so we need to navigate on the system. Changing our directory to www-data's home directory, then listing the files there, we will see flag2.txt.
 
