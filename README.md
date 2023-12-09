@@ -4,16 +4,19 @@ This CTF Challenge was created as part of the Project Management course. It cont
 This challenge can be difficult for a student, so don't worry if you can't get it done. Also, don't forget to check the hints if you are struggling at some point.
 
 # Getting started
->> still working in this section
-- you will need a reverse shell script at some point. Ff you are not familiar with them, we recommend one as a hint at some point
-- download container
-- launch container
-- access website: https://localhost:4443
-Good luck!
+First, download the challenge container.
+```
+docker pull ghcr.io/dbh201/challenge4:latest
+```
+Now, launch the container.
+```
+docker run -p 4443:4443 ghcr.io/dbh201/challenge4:latest
+```
+Access the website https://localhost:4443 and good luck!
 
-- Not mandatory but recommended
-kali linux has plenty of pre-installed tools that could be useful for this and other challenges
+At some point, you will use a reverse shell script in this challenge. If you are not familiar with them, we recommend one as a hint, so don't worry about it.
 
+Also, Kali is not mandatory but recommended, since it has plenty of pre-installed tools that could be useful for this and other challenges. 
 
 # Hints
 ## Flag 1
@@ -80,6 +83,30 @@ You need to become root using your p0wny shell, but you can't seem to type in yo
 
 
 # Solution
+## Flag 1
+Since we are supposed to look for pages that should be unacessible, we could try a few common names such as "/admin". However, some tools can do their job for us.
+
+
+Dirb is a fantastic tool for that, and it is already installed in Kali. We can simply run it on our server (make sure you change the IP to match yours).
+```bash
+
+```
+After checking some of the results, we will eventually find the /data directory, that contains some interest files such as "flag1.txt". 
+
+<details>
+    <summary>By checking its content we will find the first flag!</summary>
+    >> flag1: Pr0Jmngmnt15c00l
+    >> User: admin
+    >> Password: thispasswordishuge!
+    >> You got the flag! What a place for a password to be, right? :P
+    >> How much can you do with your new admin account? There must be some way to control the forum. 
+</details>
+
+
+## Flag 2
+
+
+## Flag 3
 
 
 
