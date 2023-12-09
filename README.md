@@ -108,11 +108,11 @@ Dirb is a fantastic tool for that, and it is already installed in Kali. We can s
 
 ...hidden output
 
----- Scanning URL: https://192.168.0.5:4443/ ----
-                                                                                                                                                          ==> DIRECTORY: https://192.168.0.5:4443/adm/
-                                                                             ==> DIRECTORY: https://192.168.0.5:4443/data/
-                                                                             ==> DIRECTORY: https://192.168.0.5:4443/images/
-+ https://192.168.0.5:4443/index.php (CODE:200|SIZE:17810)   
+---- Scanning URL: https://192.168.0.5:4443/ ---- 
+    ==> DIRECTORY: https://192.168.0.5:4443/adm/
+    ==> DIRECTORY: https://192.168.0.5:4443/data/
+    ==> DIRECTORY: https://192.168.0.5:4443/images/
+    + https://192.168.0.5:4443/index.php (CODE:200|SIZE:17810)   
 
 ...hidden output
 ```
