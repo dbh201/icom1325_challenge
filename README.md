@@ -87,6 +87,12 @@ You need to become root using your p0wny shell, but you can't seem to type in yo
 If you want to go deeper into what you practiced in this Challenge, check some recommendations.
 
 ## Reverse Shell scripts
+A reverse shell script was used in this challenge to gain access to the target machine. Although it was used to simulate an attack, these scripts can be used with no ill intentions.
 
+Besides that, reverse shell scripts can be programmed in different languages, and even customized to your own project. Check some by yourself!
 
-## Web Crawlers & Bruteforcers
+## Brute force tools
+Bruteforce is a well known strategy that consists in trying over and over different combinations until you get the right one.
+
+Although we use a directory brute force in this Challenge, there are many other types of brute force tools, the most common being password crackers. But also give it a try to explore other tools that interact with DNS and even biometrics. 
+
