@@ -99,7 +99,7 @@ You need to become root using your p0wny shell, but you can't seem to type in yo
 
 # Solution
 ## Flag 1
-Since we are supposed to look for pages that should be unacessible, we could try a few common names such as "/admin". However, some tools can do their job for us.
+Since we are supposed to look for pages that should be unacessible, we could try a few common names such as "/admin". However, some tools can do this job for us.
 
 Dirb is a fantastic tool for that, and it is already installed in Kali. We can simply run it on our server (make sure you change the IP to match yours).
 ```bash
