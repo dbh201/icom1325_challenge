@@ -207,7 +207,7 @@ Password:
 www-data@fc1b13fe1365:/var/www#
 ```
 
-So this time we got no `Authentication failure`, so lucky us that the owner of this system decided to reuse his password. But if you check the user, it is still the same. Let's see if we can pass any command to that user.
+So this time we got no `Authentication failure`; lucky us that the owner of this system decided to reuse his password. But if you check the user, it is still the same. Let's see if we can pass any command to that user.
 
 ```
 www-data@fc1b13fe1365:/var/www# echo "thispasswordishuge!" | su - root -c "ls"
