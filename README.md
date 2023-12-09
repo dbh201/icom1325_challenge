@@ -1,3 +1,18 @@
+- [Challenge Overview](#challenge-overview)
+- [Getting started](#getting-started)
+- [Hints](#hints)
+  - [Flag 1](#flag-1)
+  - [Flag 2](#flag-2)
+  - [Flag 3](#flag-3)
+- [Solution](#solution)
+  - [Flag 1](#flag-1-1)
+  - [Flag 2](#flag-2-1)
+  - [Flag 3](#flag-3-1)
+- [More Studies](#more-studies)
+  - [Reverse Shell scripts](#reverse-shell-scripts)
+  - [Brute force tools](#brute-force-tools)
+
+
 # Challenge Overview
 This CTF Challenge was created as part of the Project Management course. It contains 3 flags and it is all about getting access one step at a time!
 
@@ -92,7 +107,7 @@ Dirb is a fantastic tool for that, and it is already installed in Kali. We can s
 ```
 After checking some of the results, we will eventually find the /data directory, that contains some interest files such as "flag1.txt". 
 
-![/data files](/IMG1.png?raw=true)
+![/data files](/images/IMG1.png?raw=true)
 
 <details>
     <summary>By checking "flag1.txt" content we will find the first flag!</summary>
@@ -116,11 +131,11 @@ First, login with your recently "stolen" credentials! Hey, they shouldn't keep i
 
 Exploring some of the buttons on the forum, we will eventually come across "Administration", which will take us to the Admin Control Panel.
 
-![/Administration button location](/IMG2.png?raw=true)
+![/Administration button location](/images/IMG2.png?raw=true)
 
 More exploring! After checking some of the links on the Admin Control Panel, we will eventually find the "File Administration System", where we can see, download, and - most important - upload some files.
 
-![/Admin Control Panel home page](/IMG3.png?raw=true)
+![/Admin Control Panel home page](/images/IMG3.png?raw=true)
 
 Good for us, this forum doesn't even check what files are being uploaded, so we are going to import a script!
 
@@ -136,7 +151,7 @@ https://192.168.0.5:4443/shell.php
 
 We now have access to the server's terminal as nginx's user.
 
-![/p0wny's terminal](/IMG4.png?raw=true)
+![/p0wny's terminal](/images/IMG4.png?raw=true)
 
 Unfortunely, we can't really find the flag here, so we need to navigate on the system. Changing our directory to www-data's home directory, then listing the files there, we will see flag2.txt.
 
