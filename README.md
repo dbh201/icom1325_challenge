@@ -86,19 +86,22 @@ You need to become root using your p0wny shell, but you can't seem to type in yo
 ## Flag 1
 Since we are supposed to look for pages that should be unacessible, we could try a few common names such as "/admin". However, some tools can do their job for us.
 
-
 Dirb is a fantastic tool for that, and it is already installed in Kali. We can simply run it on our server (make sure you change the IP to match yours).
 ```bash
 
 ```
 After checking some of the results, we will eventually find the /data directory, that contains some interest files such as "flag1.txt". 
 
+>> IMG 1
+
 <details>
-    <summary>By checking its content we will find the first flag!</summary>
+    <summary>By checking "flag1.txt" content we will find the first flag!</summary>
     <pre><code>
     flag1: Pr0Jmngmnt15c00l
+
     User: admin
     Password: thispasswordishuge!
+
     You got the flag! What a place for a password to be, right? :P
     How much can you do with your new admin account? There must be some way to control the forum. 
     </code></pre>
@@ -107,7 +110,47 @@ After checking some of the results, we will eventually find the /data directory,
 
 
 ## Flag 2
+Now that we have admin credentials, let's see what we can do with that.
 
+First, login with your recently "stolen" credentials! Hey, they shouldn't keep it on a text file!
+
+Exploring some of the buttons on the forum, we will eventually come across "Administration", which will take us to the Admin Control Panel.
+
+>> IMG 2
+
+More exploring! After checking some of the links on the Admin Control Panel, we will eventually find the "File Administration System", where we can see, download, and - most important - upload some files.
+
+>> IMG 3
+
+Good for us, this forum doesn't even check what files are being uploaded, so we are going to import a script!
+
+Some scripts can grant you access to the system, and although programming one from scratch can be done, we will simply use an already-working solution.
+
+p0wny is a php script that will allow you to get access to the server's terminal, check it out: https://github.com/flozz/p0wny-shell
+
+The only file we will need is "shell.php". Let's upload it and then navigate to it. Don't forget to match your IP address, port, and file name. 
+
+```
+https://192.168.0.5:4443/shell.php
+```
+
+We now have access to the server's terminal as nginx's user.
+
+>> IMG 4
+
+Unfortunely, we can't really find the flag here, so we need to navigate on the system. Changing our directory to www-data's home directory, then listing the files there, we will see flag2.txt.
+
+<details>
+    <summary>Let's see what's inside of it</summary>
+    <pre><code>
+    flag2: BforBodyNotBook-ofKnowledge
+
+    You got the flag! Now it's time to escalate...
+
+    You need to become root using your p0wny shell, but you can't seem to type in your password...
+    </code></pre>
+
+</details>
 
 ## Flag 3
 
