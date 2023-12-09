@@ -92,7 +92,7 @@ Dirb is a fantastic tool for that, and it is already installed in Kali. We can s
 ```
 After checking some of the results, we will eventually find the /data directory, that contains some interest files such as "flag1.txt". 
 
->> IMG 1
+![/data files](/IMG1.png?raw=true)
 
 <details>
     <summary>By checking "flag1.txt" content we will find the first flag!</summary>
