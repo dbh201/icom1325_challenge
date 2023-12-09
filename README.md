@@ -103,7 +103,18 @@ Since we are supposed to look for pages that should be unacessible, we could try
 
 Dirb is a fantastic tool for that, and it is already installed in Kali. We can simply run it on our server (make sure you change the IP to match yours).
 ```bash
+┌──(kali㉿kali)-[~]
+└─$ dirb https://192.168.0.5:4443
 
+...hidden output
+
+---- Scanning URL: https://192.168.0.5:4443/ ----
+                                                                                                                                                          ==> DIRECTORY: https://192.168.0.5:4443/adm/
+                                                                             ==> DIRECTORY: https://192.168.0.5:4443/data/
+                                                                             ==> DIRECTORY: https://192.168.0.5:4443/images/
++ https://192.168.0.5:4443/index.php (CODE:200|SIZE:17810)   
+
+...hidden output
 ```
 After checking some of the results, we will eventually find the /data directory, that contains some interest files such as "flag1.txt". 
 
